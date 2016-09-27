@@ -94,18 +94,57 @@ extension SimonSays {
 
     mutating func guessRed() {
         makeGuessWith(.red)
+        print("You guessed red")
+        if wonGame() == true{
+            print("You win!")
+        }else{
+            if wonGame() != true && chosenColors.count == 5{
+                print("You lost!")
+            }
+        }
+        
+        
     }
-    
+
     mutating func guessGreen() {
         makeGuessWith(.green)
+      print("You guessed green.")
+        if  wonGame() == true {
+            print("You win!")
+        }else{
+            if wonGame() != true && chosenColors.count == 5 {
+                print("You lost!")
+            }
+        }
+        
     }
-    
+
     mutating func guessYellow() {
         makeGuessWith(.yellow)
+        print("You guessed yellow.")
+        if  wonGame() == true {
+            print("You win!")
+        }else{
+            if wonGame() != true && chosenColors.count == 5 {
+                print("You lost!")
+            }
+        }
+        
     }
     
     mutating func guessBlue() {
         makeGuessWith(.blue)
+        print("You guessed blue")
+        if  wonGame() == true {
+            print("You win!")
+        }else{
+            if wonGame() != true && chosenColors.count == 5 {
+                print("You lost!")
+            }
+        }
+        
+        
+        
     }
     
     mutating func tryAgainWithTheSamePattern() {

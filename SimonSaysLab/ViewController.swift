@@ -13,11 +13,48 @@ class ViewController: UIViewController {
     @IBOutlet weak var displayColorView: UIView!
     @IBOutlet weak var startGameButton: UIButton!
     @IBOutlet weak var winLabel: UILabel!
+    
+    
+    @IBAction func yellowButtonPressed(_ sender: AnyObject) {
+            simonSaysGame.guessYellow()
+    }
+    
+    @IBAction func blueButtonPressed(_ sender: AnyObject) {
+        simonSaysGame.guessBlue()
+    }
+   
+    @IBAction func greenButtonPressed(_ sender: AnyObject) {
+        simonSaysGame.guessGreen()
+    }
+    
+    @IBAction func redButtonPressed(_ sender: AnyObject) {
+        simonSaysGame.guessRed()
+    }
+
+    
+
+
+    
+    
+    
+    
+    
     var simonSaysGame = SimonSays()
     var buttonsClicked = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+           print("viewDidLoad() called")
+        self.winLabel.isHidden = true
+        
+
+        
+        func viewWillAppear(animated: Bool) {
+            super.viewWillAppear(animated)
+            print("viewWillAppear(_:) called.")
+            
+        }
+        
     }
 }
 
@@ -30,6 +67,8 @@ extension ViewController {
             }, completion: nil)
         
         displayTheColors()
+        
+        
     }
     
     fileprivate func displayTheColors() {
